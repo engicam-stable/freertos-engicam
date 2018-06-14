@@ -81,14 +81,14 @@
 #define BOARD_GPIO_SENSOR_MAG_ALS_HANDLER     GPIO6_Combined_0_15_Handler
 
 /* Debug UART information for this board */
-#define BOARD_DEBUG_UART_RDC_PDAP             rdcPdapUart2
+#define BOARD_DEBUG_UART_RDC_PDAP             rdcPdapUart1
 #define BOARD_DEBUG_UART_CCM_ROOT             ccmRootUartClkSel
 #define BOARD_DEBUG_UART_CCM_DIV              ccmRootUartClkPodf
 #define BOARD_DEBUG_UART_CCM_CCGR             ccmCcgrGateUartClk
 #define BOARD_DEBUG_UART_CCM_CCGR_SERIAL      ccmCcgrGateUartSerialClk
-#define BOARD_DEBUG_UART_BASEADDR             UART2
-#define BOARD_DEBUG_UART_IRQ_NUM              UART2_IRQn
-#define BOARD_DEBUG_UART_HANDLER              UART2_Handler
+#define BOARD_DEBUG_UART_BASEADDR             UART1
+#define BOARD_DEBUG_UART_IRQ_NUM              UART1_IRQn
+#define BOARD_DEBUG_UART_HANDLER              UART1_Handler
 
 /* MU information for this board*/
 #define BOARD_MU_HANDLER                      MU_M4_Handler

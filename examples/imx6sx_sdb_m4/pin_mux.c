@@ -81,6 +81,28 @@ void configure_uart_pins(UART_Type* base)
                                                IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO07_HYS_MASK;
             IOMUXC_UART2_IPP_UART_RXD_MUX_SELECT_INPUT = IOMUXC_UART2_IPP_UART_RXD_MUX_SELECT_INPUT_DAISY(1);
             break;
+			
+        case UART1_BASE:
+            // UART1 iomux configuration
+            IOMUXC_SW_MUX_CTL_PAD_GPIO1_IO04 = IOMUXC_SW_MUX_CTL_PAD_GPIO1_IO04_MUX_MODE(0);
+            IOMUXC_SW_MUX_CTL_PAD_GPIO1_IO05 = IOMUXC_SW_MUX_CTL_PAD_GPIO1_IO05_MUX_MODE(0);
+            IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO04 = IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO04_PKE_MASK |
+                                               IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO04_PUE_MASK |
+                                               IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO04_PUS(2)   |
+                                               IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO04_SPEED(2) |
+                                               IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO04_DSE(6)   |
+                                               IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO04_SRE_MASK |
+                                               IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO04_HYS_MASK;
+            IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO05 = IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO05_PKE_MASK |
+                                               IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO05_PUE_MASK |
+                                               IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO05_PUS(2)   |
+                                               IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO05_SPEED(2) |
+                                               IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO05_DSE(6)   |
+                                               IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO05_SRE_MASK |
+                                               IOMUXC_SW_PAD_CTL_PAD_GPIO1_IO05_HYS_MASK;
+            IOMUXC_UART1_IPP_UART_RXD_MUX_SELECT_INPUT = IOMUXC_UART1_IPP_UART_RXD_MUX_SELECT_INPUT_DAISY(1);
+            break;
+			
         default:
             break;
     }
